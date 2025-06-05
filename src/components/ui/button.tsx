@@ -5,14 +5,16 @@ import { cva, type VariantProps } from "class-variance-authority";
 import { cn } from "@/lib/utils";
 
 const buttonVariants = cva(
-  "inline-flex items-center justify-center gap-2 whitespace-nowrap rounded-md text-sm font-medium transition-all disabled:pointer-events-none disabled:opacity-50 [&_svg]:pointer-events-none cursor-pointer [&_svg:not([class*='size-'])]:size-4 shrink-0 [&_svg]:shrink-0 outline-none focus-visible:border-ring focus-visible:ring-ring/50 focus-visible:ring-[3px] aria-invalid:ring-primary-purple/20 dark:aria-invalid:ring-primary-purple/40 aria-invalid:border-primary-purple",
+  "inline-flex items-center justify-center gap-2 whitespace-nowrap rounded-md text-sm font-medium transition-all disabled:pointer-events-none disabled:opacity-50 [&_svg]:pointer-events-none cursor-pointer [&_svg:not([class*='size-'])]:size-4 shrink-0 [&_svg]:shrink-0 outline-none focus-visible:border-ring focus-visible:ring-ring/50 focus-visible:ring-[3px] aria-invalid:ring-primary-green/20 dark:aria-invalid:ring-primary-green/40 aria-invalid:border-primary-green",
   {
     variants: {
       variant: {
         default:
           "bg-primary text-primary-foreground shadow-xs hover:bg-primary/90",
-        purple:
-          "bg-primary-purple text-white shadow-xs hover:bg-primary-purple/90 focus-visible:ring-primary-purple/20 dark:focus-visible:ring-primary-purple/40 dark:bg-primary-purple/60",
+        green:
+          "bg-primary-green text-white shadow-xs hover:bg-primary-green/90 focus-visible:ring-primary-green/20 dark:focus-visible:ring-primary-green/40 dark:bg-primary-green/60",
+        greenOutline:
+          "border-primary-green border-2 text-black shadow-xs hover:bg-primary-green/30 focus-visible:border-primary-green/40 dark:focus-visible:border-primary-green/40 dark:border-primary-green/60",
         outline:
           "border bg-background shadow-xs hover:bg-accent hover:text-accent-foreground dark:bg-input/30 dark:border-input dark:hover:bg-input/50",
         secondary:
