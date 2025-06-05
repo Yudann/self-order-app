@@ -4,7 +4,7 @@ const config = {
   appShortName: 'Self Order App',
   publicAssetUrl: 'http://localhost:8081/uploads/',
   assetsUrl: 'http://localhost:8081/uploads/',
-  foodyAppService: 'http://localhost:8081/api',
+  selfOrderService: 'http://localhost:8081/api',
 };
 
 export default config;
