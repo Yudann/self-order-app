@@ -3,7 +3,7 @@
 import { Button } from "@/components/ui/button";
 import { FiShoppingCart } from "react-icons/fi";
 import Link from "next/link";
-import { useCartItems } from "@/app/hooks/useCart"; // ⬅️ pakai yang baru
+import { useCartItems } from "@/hooks/useCart"; 
 
 export default function CartFooter() {
   const { cartItems, totalPrice } = useCartItems(); // ⬅️ panggil hook custom yang udah fix
