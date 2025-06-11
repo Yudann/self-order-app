@@ -6,7 +6,7 @@ import config from "@/config";
 import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { FiShoppingCart } from "react-icons/fi";
-import { useCart, useCartItems } from "@/app/hooks/useCart";
+import { useCart, useCartItems } from "@/hooks/useCart";
 import MessageBox from "./MessageBox"; // Import komponen MessageBox
 
 interface ProductCardProps {
@@ -103,7 +103,7 @@ export default function ProductCard({
                 >
                   <Button
                     variant="greenOutline"
-                    className="rounded-full h-12 w-12 text-xl px-0 py-0"
+                    className="rounded-full w-8 h-8 md:h-12 md:w-12 text-xl px-0 py-0"
                     onClick={() => setIsExpanded(true)}
                   >
                     +
