@@ -14,7 +14,7 @@ export default async function ProductsPage() {
     }
 
     return (
-      <div className="mt-20">
+      <div className="mt-20 mb-28">
         <ProductsList data={data} />
       </div>
     );
@@ -27,7 +27,7 @@ export default async function ProductsPage() {
     }
 
     return (
-      <h1 className="mt-20 text-center text-xl text-red-600 font-bold">
+      <h1 className="mt-20 text-center text-xl text-red-600 font-bold ">
         Gagal Fetch data dengan error: <br />
         {errorMessage}
       </h1>
