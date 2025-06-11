@@ -1,9 +1,11 @@
+// types/customer.type.ts
 export interface CustomerApiResponse {
-  id_customer: number;
-  phone_number: string;
-  customer_name: string;
+  idCustomer: number;  // matches Java entity
+  customerName: string;
+  phoneNumber: string;
 }
 
-export interface CreateCustomerPayload extends CustomerApiResponse {
-    createdAt?: string
+export interface CreateCustomerPayload {
+  customerName: string;
+  phoneNumber: string;
 }
