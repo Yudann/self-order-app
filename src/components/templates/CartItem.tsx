@@ -1,6 +1,6 @@
 "use client";
 
-import { useCart } from "@/app/hooks/useCart";
+import { useCart } from "@/hooks/useCart";
 import config from "@/config";
 import Image from "next/image";
 import { motion } from "framer-motion";
