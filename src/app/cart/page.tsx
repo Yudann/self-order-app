@@ -1,6 +1,6 @@
 "use client";
 
-import { useCart, useCartItems } from "@/app/hooks/useCart";
+import { useCart, useCartItems } from "@/hooks/useCart";
 import { CartItem } from "@/components/templates/CartItem";
 import { useRouter } from "next/navigation";
 import { motion, AnimatePresence } from "framer-motion";
