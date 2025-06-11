@@ -10,10 +10,23 @@ export async function findCustomersApi(): Promise<CustomerApiResponse[]> {
   return res.data.data;
 }
 
-export async function createCustomerApi(payload: CreateCustomerPayload): Promise<CustomerApiResponse> {
+// services/customer.service.ts
+export async function createCustomerApi(
+  payload: CreateCustomerPayload
+): Promise<CustomerApiResponse> {
   const res = await axiosInstance.selfOrderService.post<ApiResponse<CustomerApiResponse>>(
     '/customers',
-    payload
+    {
+      customerName: payload.customerName,
+      phoneNumber: payload.phoneNumber
+    }
+  );
+  return res.data.data;
+}
+
+export async function findCustomers(): Promise<CustomerApiResponse[]> {
+  const res = await axiosInstance.selfOrderService.get<ApiResponse<CustomerApiResponse[]>>(
+    '/customers'
   );
   return res.data.data;
 }
