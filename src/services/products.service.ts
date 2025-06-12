@@ -1,4 +1,4 @@
-import { findProductsApi } from "@/repositories/products.repository";
+import { findProductsApi} from "@/repositories/products.repository";
 import { ProductsApiResponse } from "@/types/product.type";
 
 export async function findProducts(): Promise<ProductsApiResponse[]> {
