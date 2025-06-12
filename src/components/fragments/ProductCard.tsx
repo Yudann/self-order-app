@@ -90,7 +90,7 @@ export default function ProductCard({
         </div>
 
         <div className="flex items-center gap-2">
-          <div className="relative min-w-[120px] h-12">
+          <div className="relative w-full h-12">
             <AnimatePresence mode="wait" initial={false}>
               {!isExpanded ? (
                 <motion.div
