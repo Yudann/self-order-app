@@ -6,8 +6,10 @@ import MessageBox from "@/components/fragments/MessageBox";
 import { createTransaction } from "@/services/transaction.service";
 import { CreateTransactionPayload } from "@/types/transaction.type";
 import { ensureCustomerExists } from "@/repositories/checkout.repository";
+import { useRouter } from "next/navigation";
 
 export default function CheckoutPage() {
+  const router = useRouter();
   const [name, setName] = useState("");
   const [phone, setPhone] = useState("");
   const [loading, setLoading] = useState(false);
@@ -79,6 +81,7 @@ export default function CheckoutPage() {
       clearCart();
       setName("");
       setPhone("");
+      router.push("/struck");
     } catch (err: unknown) {
       console.error(err);
 
