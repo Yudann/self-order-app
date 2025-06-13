@@ -1,21 +1,16 @@
 "use client";
 
-import { useCart, useCartItems } from "@/hooks/useCart";
+import { useCartItems } from "@/hooks/useCart";
 import { CartItem } from "@/components/templates/CartItem";
 import { useRouter } from "next/navigation";
 import { motion, AnimatePresence } from "framer-motion";
 import { FiArrowLeft, FiShoppingBag } from "react-icons/fi";
+import Link from "next/link";
 
 export default function CartPage() {
   const router = useRouter();
   const { cartItems } = useCartItems();
-  const { clearCart } = useCart();
   const { totalPrice } = useCartItems();
-
-  const handleBayar = () => {
-    alert("Bayar berhasil!");
-    clearCart();
-  };
 
   return (
     <motion.div
@@ -101,14 +96,15 @@ export default function CartPage() {
                 </div>
               </div>
 
-              <motion.button
-                whileHover={{ scale: 1.02 }}
-                whileTap={{ scale: 0.98 }}
-                onClick={handleBayar}
-                className="w-full bg-primary-green hover:bg-primary-green/70 cursor-pointer text-white px-6 py-3 rounded-lg font-medium transition-colors"
-              >
-                Bayar Sekarang
-              </motion.button>
+              <Link href="/checkout">
+                <motion.button
+                  whileHover={{ scale: 1.02 }}
+                  whileTap={{ scale: 0.98 }}
+                  className="w-full bg-primary-green hover:bg-primary-green/70 cursor-pointer text-white px-6 py-3 rounded-lg font-medium transition-colors"
+                >
+                  Bayar Sekarang
+                </motion.button>
+              </Link>
             </motion.div>
           </div>
         )}
