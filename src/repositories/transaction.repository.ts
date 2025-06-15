@@ -16,10 +16,12 @@ export async function createTransactionApi(
   return res.data.data;
 }
 
-export async function getTransactionDetailsApi(transactionId: number): Promise<TransactionDetailsApiResponse> {
+// transaction.repository.ts
+export async function getTransactionsApi(
+): Promise<TransactionDetailsApiResponse> {
   try {
     const res = await axiosInstance.selfOrderService.get<ApiResponse<TransactionDetailsApiResponse>>(
-      `/transactions/${transactionId}`
+      `/transactions`
     );
     return res.data.data;
   } catch (error) {
