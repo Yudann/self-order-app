@@ -28,3 +28,37 @@ export interface CheckoutPayload {
   customer_id: number;
   items: CheckoutItem[];
 }
+
+// types/transaction.type.ts
+
+export interface TransactionDetailProduct {
+  id: number;
+  productImage: string;
+  productName: string;
+  productCategory: string;
+  price: number;
+  stock: number;
+}
+
+export interface TransactionDetailItem {
+  id: number;
+  product: TransactionDetailProduct;
+  quantity: number;
+  subtotal: number;
+}
+
+export interface TransactionCustomer {
+  idCustomer: number;
+  customerName: string;
+  phoneNumber: string;
+}
+
+export interface TransactionDetailsApiResponse {
+  id: number;
+  customer: TransactionCustomer;
+  totalAmount: number;
+  createdAt: string;
+  details: TransactionDetailItem[];
+}
+
+export type TransactionLastResponse = TransactionDetailsApiResponse;
