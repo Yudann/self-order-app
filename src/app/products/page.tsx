@@ -28,12 +28,12 @@ export default function ProductsPage() {
   );
 
   if (loading) {
-    return <div className="text-center py-10">Memuat produk...</div>;
+    return <div className="text-center py-10 ">Memuat produk...</div>;
   }
 
   if (error) {
     return (
-      <div className="mt-20 text-center">
+      <div className="mt-20 text-center max-w-7xl">
         <h1 className="text-xl text-red-600 font-bold">Gagal memuat produk</h1>
         <p className="text-gray-600 mt-2">{error}</p>
         <button

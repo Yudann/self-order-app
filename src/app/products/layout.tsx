@@ -8,9 +8,9 @@ export default function ProductsLayout({
   children: React.ReactNode;
 }) {
   return (
-    <>
+    <div className="max-w-7xl mx-auto">
       {children}
       <CartFooter />
-    </>
+    </div>
   );
 }

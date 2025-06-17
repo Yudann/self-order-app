@@ -19,9 +19,9 @@ export default function DashboardLayout({
 
   const toggleSidebar = () => setIsSidebarOpen((prev) => !prev);
   return (
-    <div className="flex">
+    <div className="flex bg-[#f6f6f6] ">
       <Button
-        variant="green"
+        variant="outline"
         className="lg:hidden fixed top-4 left-4 z-50 text-black bg-white"
         onClick={toggleSidebar}
       >
@@ -29,7 +29,7 @@ export default function DashboardLayout({
       </Button>
 
       <DashboardSidebar isOpen={isSidebarOpen} />
-      <div className="flex-1 lg:ml-[380px]">{children}</div>
+      <div className="flex-1 lg:ml-[380px] pt-10 ">{children}</div>
     </div>
   );
 }

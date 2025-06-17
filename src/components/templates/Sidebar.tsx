@@ -15,7 +15,7 @@ export default function DashboardSidebar({ isOpen }: { isOpen: boolean }) {
     >
       <div>
         <h1 className="text-2xl font-bold mb-10 text-blue-600">
-          Self Servoce App
+          Self Order App
         </h1>
 
         <nav className="space-y-4 text-gray-700">

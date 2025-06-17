@@ -16,11 +16,9 @@ export async function createTransactionApi(
   return res.data.data;
 }
 
-// transaction.repository.ts
-export async function getTransactionsApi(
-): Promise<TransactionDetailsApiResponse> {
+export async function getTransactionsApi(): Promise<TransactionDetailsApiResponse[]> {
   try {
-    const res = await axiosInstance.selfOrderService.get<ApiResponse<TransactionDetailsApiResponse>>(
+    const res = await axiosInstance.selfOrderService.get<ApiResponse<TransactionDetailsApiResponse[]>>(
       `/transactions`
     );
     return res.data.data;

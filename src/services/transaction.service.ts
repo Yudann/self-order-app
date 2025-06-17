@@ -7,10 +7,10 @@ export async function createTransaction(payload: CreateTransactionPayload): Prom
   return await createTransactionApi(payload);
 }
 
-export async function getAllTransactions(
-): Promise<TransactionDetailsApiResponse> {
+// Di file service (transaction.service.ts)
+export async function getAllTransactions(): Promise<TransactionDetailsApiResponse[]> {
   const transaction = await getTransactionsApi();
-  return transaction
+  return transaction; // Pastikan ini mengembalikan array
 }
 
 export async function getLastTransaction(): Promise<TransactionDetailsApiResponse> {
