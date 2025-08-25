@@ -88,7 +88,7 @@ const RecentTransactions: React.FC<RecentTransactionsProps> = ({
       <div className="flex justify-between items-center mb-4">
         <h2 className="text-xl font-semibold">Transaksi Terakhir</h2>
         <Link
-          href="/transactions"
+          href="/dashboard/transactions"
           className="text-blue-500 text-sm flex items-center"
         >
           Lihat Semua <FiArrowRight className="ml-1" />

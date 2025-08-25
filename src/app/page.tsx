@@ -5,7 +5,7 @@ import Image from "next/image";
 export default function Home() {
   return (
     <div className="w-full min-h-screen mx-auto h-full flex flex-col justify-center items-center">
-      <h1 className="text-3xl font-bold">Welcome To Self Order App entahlah</h1>
+      <h1 className="text-3xl font-bold">Welcome To Self Order App</h1>
       <div className="flex items-center justify-center gap-4 mt-5">
         <Link href="/products">
           <Button
